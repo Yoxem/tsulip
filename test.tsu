@@ -1,0 +1,22 @@
+(% 建立網格 )
+
+(create-page "a4")
+
+
+(create-frame 1 "main1" 100 100 400 500 "main2")
+
+(define page-num 0)
+(define add-page (lambda () (begin (new-page)(set! page-num (+ page-num 1)) (create-frame page-num 100 100 400 500 (str-append "main" (+ page-num 1))))
+
+(define font_color "#ffffff")
+(define font_size 10)
+(define font_style "Italic")
+(define font_family "Noto Sans CJK TC")
+(define font_weight "Bold")
+(define old_var "")
+
+(define frame_1_text (string-append "願您們平安。" (void_to_empty_str (set! font_size 12)) "Peace upon you."))
+
+(text_to_box)
+
+(input_boxes (1 "1st") frame_1_text)
